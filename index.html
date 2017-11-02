@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Lebenslauf</title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root">
+			<div id="navi"></div>
+			<h1 class="headline">Persönliches</h1>
+			<div id="persoenliches"></div>
+			<div id="foto"></div>
+			<h1 class="headline">Schulische Ausbildung</h1>
+			<div id="ausbildung"></div>
+			<h1 class="headline">Sprachen</h1>
+			<div id="sprachen"></div>
+			<h1 class="headline">Hobbies</h1>
+			<div id="hobbies"></div>
+			<div id="footer"></div>
+		</div>
+		
+<script type="text/babel">
+	const navi =(
+		<div id="navigation">
+			<a className="nav" href="index.html">Lebenslauf</a>
+			<a className="nav" href="html/portfolio.html">Portfolio</a>
+			<a className="nav" href="html/zeugnis.html">Zeugnis</a>
+		</div>
+	);
+	ReactDOM.render(
+	navi,
+	document.getElementById('navi')
+	);
+	
+	const foto =(
+		<img id="bild" src="img/Bewerbungsbild.jpg" alt="Bewerbungsbild"/>
+	);
+	ReactDOM.render(
+	foto,
+	document.getElementById('foto')
+	);
+
+	function PersoenlichesListe(props){
+		return <p>{props.Abfrage} : {props.Daten}</p>;
+	}
+	
+	function Persoenliches(){
+	return(
+		<div>
+		<PersoenlichesListe Abfrage="Geburtsdatum " Daten="08.01.1995 "/>
+		<PersoenlichesListe Abfrage="Geburtsort " Daten="Karlsruhe "/>
+		<PersoenlichesListe Abfrage="Familienstand " Daten="ledig "/>
+		<PersoenlichesListe Abfrage="Staatsangehörigkeit " Daten="deutsch "/>
+		</div>
+		);
+	}
+	
+	ReactDOM.render(
+	<Persoenliches />,
+	document.getElementById('persoenliches')
+	);
+	
+	
+	function AusbildungListe(props){
+		return(
+		<div>
+			<p id="datum">{props.DatumBegin} - {props.DatumEnd}</p>
+			<p>{props.Beschaeftigung}</p>
+		</div>
+		);
+	}
+	
+	function Ausbildung(){
+		return (
+		<div>
+		<AusbildungListe DatumBegin="01.04.2017" DatumEnd="31.07.2017" Beschaeftigung="Praktikum Mayer IT-Solutions"/>
+		<AusbildungListe DatumBegin="2015" DatumEnd="2017" Beschaeftigung="SRH Fachschulen Heidelberg, Ausbildung zum Staatlich anerkannten   Informatiker für Game- und Multimedia- Entwicklung"/>
+		<AusbildungListe DatumBegin="2012" DatumEnd="2014" Beschaeftigung="Fritz-Erler-Schule Pforzheim, Wirtschaftsgymnasium"/>
+		<AusbildungListe DatumBegin="2005" DatumEnd="2012" Beschaeftigung="Gymnasium Remchingen (sprachlicher Zug)"/>
+		<AusbildungListe DatumBegin="2001" DatumEnd="2005" Beschaeftigung="Grundschule Söllingen"/>
+		</div>
+		);
+	}
+	
+	ReactDOM.render(
+	<Ausbildung />,
+	document.getElementById('ausbildung')
+	);
+	
+	
+	function SprachenListe(props){
+		return <p>{props.Sprache} (Schulkenntnisse ab Klasse {props.Kenntnisse})</p>;
+	}
+	
+	function Sprachen(){
+	return(
+		<div>
+		<SprachenListe Sprache="Englisch" Kenntnisse="5"/>
+		<SprachenListe Sprache="Französisch " Kenntnisse="6"/>
+		<SprachenListe Sprache="Spanisch " Kenntnisse="8"/>
+		</div>
+		);
+	}
+	
+	ReactDOM.render(
+	<Sprachen />,
+	document.getElementById('sprachen')
+	);
+	
+	function HobbiesList(props){
+		const hobbies = props.hobbies;
+		const listItems = hobbies.map((hobby) =>
+			<li>{hobby}</li>
+		);
+		return(
+			<ul>{listItems}</ul>
+		);
+	}
+	
+	const hobbies = ['Fußball', 'Skateboard', 'Ski', 'Snowboard', 'Videospiele', 'Computerspiele'];
+	ReactDOM.render(
+		<HobbiesList hobbies={hobbies} />,
+		document.getElementById('hobbies')
+	);
+	
+	
+	const element =(
+		<div>
+			<p>Pfinztal, den {new Date().toLocaleDateString()}.</p>
+		</div>
+	);	
+	ReactDOM.render(
+		element,
+		document.getElementById('footer')
+	);
+</script>
+
+	</body>
+</html>

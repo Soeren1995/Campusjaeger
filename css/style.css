@@ -1,0 +1,103 @@
+#root{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#navi{
+	width: 50%;
+	height: 100px;
+	margin: 50px auto 30px auto;
+}
+
+.nav{
+	width: 20%;
+	margin: 0 6px 0 6px;
+	text-align: center;
+	float: left;
+	display: block;
+	color: white;
+	font-family: Tahoma;
+	font-size: 20px;
+	background-color: #0B2161;
+	text-decoration: none;
+	border-left: 7px solid #5882FA;
+	border-right: 7px solid #5882FA;
+	border-radius: 3px;
+	padding: 10px 20px 10px 20px;
+}
+
+.nav:hover{
+	border-left: 7px solid #0040FF;
+	border-right: 7px solid #0040FF;
+}
+
+#foto{
+	margin: -185px 275px 0 0;
+	float: right;
+}
+
+#bild{
+	height: 150px;
+}
+
+#persoenliches{
+	width: 75%;
+	display: block;
+	color: black;
+	font-family: Tahoma;
+	font-size: 15px;
+	margin: 20px auto 60px auto;
+}
+
+#ausbildung{
+	width: 75%;
+	display: block;
+	color: black;
+	font-family: Tahoma;
+	font-size: 15px;
+	margin: 20px auto 60px auto;
+}
+
+#datum{
+	font-size: 15px;
+	margin-bottom: -15px;
+}
+
+#sprachen{
+	width: 75%;
+	display: block;
+	color: black;
+	font-family: Tahoma;
+	font-size: 15px;
+	margin: 20px auto 60px auto;
+}
+
+#hobbies{
+	width: 75%;
+	display: block;
+	color: black;
+	font-family: Tahoma;
+	font-size: 15px;
+	margin: 20px auto 60px auto;	
+}
+
+#hobbies ul li{
+	list-style-type: square;
+	margin-top: 5px;
+}
+
+#footer{
+	width: 75%;
+	display: block;
+	font-family: Tahoma;
+	font-size: 15px;
+}
+
+.headline{
+	display: block;
+	font-family: Tahoma;
+	font-size: 20px;
+	border-bottom: 2px solid #5882FA;
+	padding-left: 120px;
+	padding-bottom: 5px;
+}

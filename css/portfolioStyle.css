@@ -1,0 +1,42 @@
+#root{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#navi{
+	width: 50%;
+	height: 100px;
+	margin: 50px auto 30px auto;
+}
+
+.nav{
+	width: 20%;
+	margin: 0 6px 0 6px;
+	text-align: center;
+	float: left;
+	display: block;
+	color: white;
+	font-family: Tahoma;
+	font-size: 20px;
+	background-color: #0B2161;
+	text-decoration: none;
+	border-left: 7px solid #5882FA;
+	border-right: 7px solid #5882FA;
+	border-radius: 3px;
+	padding: 10px 20px 10px 20px;
+}
+
+.nav:hover{
+	border-left: 7px solid #0040FF;
+	border-right: 7px solid #0040FF;
+}
+
+#pdf{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#pdfObject{
+	width: 100%;
+	height: 1150px;
+}
